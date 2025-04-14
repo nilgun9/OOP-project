@@ -1,0 +1,53 @@
++----------------------+
+|      Student         |
++----------------------+
+| - name: String      |
+| - age: int         |
+| - studentId: String |
+| - major: String     |
+| - grade: double       |
++----------------------+
+| + study(): void     |
+| + takeExam(): void  |
+| + displayInfo(): void |
++----------------------+
+
+
+
+
+public class Student {
+    private string name;
+    private int age;
+    private string studentId;
+    private string major;
+    private double grade;
+
+    public Student(string name, int age, string studentId, string major, double grade) {
+        this.name = name;
+        this.age = age;
+        this.studentId = studentId;
+        this.major = major;
+        this.grade = grade;
+    }
+
+    public void study() {
+        System.out.println(name + " is studying...");
+    }
+
+    public void takeExam() {
+        System.out.println(name + " is taking an exam...");
+    }
+
+    public void displayInfo() {
+        System.out.println("Student Info: " + name + ", Age: " + age + ", ID: " + studentId +
+                ", Major: " + major + ", Grade: " + grade);
+    }
+
+    public static void main(String[] args) {
+        Student student1 = new Student("Nilgun", 18, "231156278", "Information Security", 90.67);
+
+        student1.study();
+        student1.takeExam();
+        student1.displayInfo();
+    }
+}
